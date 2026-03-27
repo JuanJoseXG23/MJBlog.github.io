@@ -2,279 +2,86 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Sorpresas – Nuestros Recuerdos</title>
+  <title>Lugares - Nuestros Recuerdos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Estilos -->
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-
 <body>
-
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="index.html">💙 Nuestros Recuerdos</a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <a class="navbar-brand" href="index.html">Nuestros Recuerdos</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir navegacion">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Inicio</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="instruccions.html">Instrucciones</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="add-memory.html">Añadir recuerdo</a>
-        </li>
-
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="instruccions.html">Instrucciones</a></li>
+        <li class="nav-item"><a class="nav-link" href="add-memory.html">Anadir recuerdo</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active"
-             href="#"
-             role="button"
-             data-bs-toggle="dropdown"
-             aria-expanded="false">
-            Descubre
-          </a>
-
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Descubre</a>
           <ul class="dropdown-menu dropdown-menu-end">
-
-            <li>
-              <a class="dropdown-item" href="nosotros.html">
-                💑 Nosotros
-              </a>
-            </li>
-
-            <li>
-              <a class="dropdown-item active" href="sorpresas.html">
-                🎁 Sorpresas
-              </a>
-            </li>
-
-            <li>
-              <a class="dropdown-item" href="lugares.html">
-                🗺️ Lugares
-              </a>
-            </li>
-
+            <li><a class="dropdown-item" href="nosotros.html">Nosotros</a></li>
+            <li><a class="dropdown-item" href="sorpresas.html">Sorpresas</a></li>
+            <li><a class="dropdown-item active" href="lugares.html" aria-current="page">Lugares</a></li>
             <li><hr class="dropdown-divider"></li>
-
-            <li>
-              <a class="dropdown-item disabled" href="#">
-                ⏳ Próximamente
-              </a>
-            </li>
-
+            <li><span class="dropdown-item disabled">Proximamente</span></li>
           </ul>
         </li>
-
       </ul>
     </div>
   </div>
 </nav>
 
-
-
-<!-- HERO -->
 <header class="hero-section text-center">
   <div class="container">
     <h1 class="display-5">Lugares</h1>
-    <p class="lead mt-3">
-        Lugares que hemos conocido
-    </p>
+    <p class="lead mt-3">Lugares que han conocido juntos.</p>
   </div>
 </header>
 
-<!-- CONTENIDO -->
 <main class="container my-5">
-<section class="places-section my-5">
-  <h2 class="text-center mb-4">🌍 Lugares que hemos conocido</h2>
+  <section class="places-section my-5">
+    <h2 class="text-center mb-4">Lugares que han conocido</h2>
 
-  <!-- Selector de región -->
-  <ul class="nav nav-pills justify-content-center mb-4" id="regionSelector">
-    <li class="nav-item">
-      <button class="nav-link" data-region="mundo">Mundo</button>
-    </li>
-    <li class="nav-item">
-      <button class="nav-link" data-region="colombia">Colombia</button>
-    </li>
-    <li class="nav-item">
-      <button class="nav-link active" data-region="antioquia">Antioquia</button>
-    </li>
-  </ul>
+    <ul class="nav nav-pills justify-content-center mb-4" id="regionSelector">
+      <li class="nav-item"><button class="nav-link" type="button" data-region="mundo" aria-pressed="false">Mundo</button></li>
+      <li class="nav-item"><button class="nav-link" type="button" data-region="colombia" aria-pressed="false">Colombia</button></li>
+      <li class="nav-item"><button class="nav-link active" type="button" data-region="antioquia" aria-pressed="true">Antioquia</button></li>
+    </ul>
 
-  <!-- Contenido de lugares -->
-  <div id="placesContent">
+    <div id="placesContent">
+      <div class="region-content" data-region="antioquia">
+        <h3 class="mb-3">Municipios visitados o por visitar</h3>
+        <div class="row g-3">
+          <div class="col-6 col-md-4 col-lg-3"><div class="place-card visited">Medellin</div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="place-card visited">Jerico</div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="place-card visited">Guatape</div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Rionegro</div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="place-card">El Retiro</div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="place-card">La Ceja</div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Envigado</div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Sabaneta</div></div>
+        </div>
+      </div>
 
-<!-- ANTIOQUIA -->
-<div class="region-content" data-region="antioquia">
-  <h3 class="mb-3">Departamentos y municipios visitados</h3>
-  <div class="row g-3">
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card visited">Medellín 💙</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card visited">Jericó 💙</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Rionegro</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card visited">Guatapé 💙</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Abejorral</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Abriaquí</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Alejandría</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Amagá</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Amalfi</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Andes</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Angelópolis</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Angostura</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Anorí</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Anzá</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Apartadó</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Arboletes</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Argelia</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Armenia</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Barbosa</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Bello</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Belmira</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Betania</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Betulia</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Briceño</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Buriticá</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Cáceres</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Caicedo</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Caldas</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Campamento</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Cañasgordas</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Caracolí</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Caramanta</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Carepa</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Carmen de Viboral</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Carolina del Príncipe</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Caucasia</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Chigorodó</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Cisneros</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Cocorná</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Concepción</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Concordia</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Copacabana</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Dabeiba</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Don Matías</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Ebéjico</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">El Bagre</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">El Carmen de Viboral</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">El Peñol</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">El Retiro</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">El Santuario</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Entrerríos</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Envigado</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Fredonia</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Frontino</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Giraldo</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Girardota</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Gómez Plata</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Granada</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Guadalupe</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Heliconia</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Hispania</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Itagüí</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Ituango</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Jardín</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">La Ceja</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">La Estrella</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">La Pintada</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">La Unión</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Liborina</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Maceo</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Marinilla</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Montebello</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Murindó</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Mutatá</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Nariño</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Nechí</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Necoclí</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Olaya</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Peñol</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Peque</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Pueblorrico</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Puerto Berrío</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Puerto Nare</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Puerto Triunfo</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Remedios</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Retiro</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Rionegro</div></div> <!-- ya lo tienes -->
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Sabanalarga</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Sabaneta</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Salgar</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">San Andrés</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">San Carlos</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">San Francisco</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">San Jerónimo</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">San José de la Montaña</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">San Juan de Urabá</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">San Luis</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">San Pedro</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">San Pedro de Urabá</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">San Rafael</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">San Roque</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">San Vicente</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Santa Bárbara</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Santa Fe de Antioquia</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Santa Rosa de Osos</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Santo Domingo</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Segovia</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Sonsón</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Sopetrán</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Támesis</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Tarazá</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Tarso</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Titiribí</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Toledo</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Turbo</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Uramita</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Urrao</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Valdivia</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Valparaíso</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Vegachí</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Venecia</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Vigía del Fuerte</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Yalí</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Yarumal</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Yolombó</div></div>
-    <div class="col-6 col-md-4 col-lg-3"><div class="place-card">Yondó</div></div>
+      <div class="region-content d-none" data-region="mundo">
+        <p class="text-center">Aqui podran agregar paises que visiten juntos.</p>
+      </div>
+
+      <div class="region-content d-none" data-region="colombia">
+        <p class="text-center">Aqui podran marcar departamentos o ciudades de Colombia.</p>
+      </div>
     </div>
-    </div>
-
-    <!-- MUNDO -->
-    <div class="region-content d-none" data-region="mundo">
-      <p class="text-center">Aquí podremos agregar los países que hemos visitado</p>
-    </div>
-
-    <!-- COLOMBIA -->
-    <div class="region-content d-none" data-region="colombia">
-      <p class="text-center">Aquí podremos agregar los departamentos que hemos visitado en Colombia</p>
-    </div>
-
-  </div>
-</section>
-
-
+  </section>
 </main>
 
-<!-- FOOTER -->
 <footer class="footer">
-  <p>Hecho con todo el amor del mundo 🤍</p>
+  <p>Hecho con todo el amor del mundo.</p>
 </footer>
 
-<!-- Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- TU SCRIPT -->
-<script src="assets/js/main.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
